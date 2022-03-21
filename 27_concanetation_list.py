@@ -3,10 +3,10 @@
 from unittest import result
 
 
-def concatenate(list):
+def concatenate_list_data(list):
     result = ''
     for element in list:
         result += str(element)
     return result
 
-print(concatenate([1, 7, 90, 36, 0, 0]))
+print(concatenate_list_data([1, 7, 90, 36, 0, 0]))
