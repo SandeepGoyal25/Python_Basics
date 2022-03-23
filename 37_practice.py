@@ -197,3 +197,143 @@ print(thislist[-2])
 thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
 if 'cherry' in thislist:
     print("Yes, 'apple' is in the fruits list")
+
+thislist = ["apple", "banana", "cherry"]
+thislist[1] = "blackcurrant"
+print(thislist)
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+thislist[1:3] = ["blackcurrant", "watermelon"]
+print(thislist)
+
+from re import T
+
+thislist_1 = ["apple", "banana", "cherry"]
+thislist_2 = ["mango", "pineapple", "papaya"]
+thistuple = ("kiwi", "orange")
+thislist_1.extend(thistuple)
+print(thislist_1)
+thislist_1.remove("cherry")
+print(thislist_1)
+thislist_1.pop(1)
+print(thislist_1)
+
+thislist = ["apple", "banana", "cherry"]
+[print(x) for x in thislist]
+
+from hashlib import new
+
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+
+for x in fruits:
+    if "a" in x:
+        newlist.append(x)
+
+print(newlist)
+
+
+from hashlib import new
+
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits if "a" in x]
+print(newlist)
+
+newlist = [x for x in fruits if x != "apple"]
+newlist = [x for x in range(10)]
+newlist = [x for x in fruits]
+newlist = [x for x in range(10) if x < 5]
+newlist = [x.upper() for x in fruits]
+newlist = ['hello' for x in fruits]
+newlist = [x if x != "banana" else "orange" for x in fruits]
+
+print(newlist)
+
+thislist = ["apple", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort()
+print(thislist)
+
+thislist = ["apple", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort(reverse = True)
+print(thislist)
+
+def myfunc(n):
+    return abs(n - 50)
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(key = myfunc)
+print(thislist)
+
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.reverse()
+print(thislist)
+
+thislist = ["apple", "banana", "cherry"]
+mylist = list(thislist)
+print(mylist)
+
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+list3 = list1+list2
+print(list3)
+for x in list2:
+    list1.append(x)
+print(list1)
+
+list1.extend(list2)
+print(list1)
+
+L1 = (("apple", "banana", "cherry"))
+print(type(L1))
+
+a = 8
+print(type(a))
+
+thisTuple = tuple(("apple", "cherry", "banana", "cherry"))
+if "apple" in thisTuple:
+    print("Yes", "apple is present")
+
+x = ("apple", "banana", "cherry")
+y = list(x)
+y.append("kiwi")
+x = tuple(y)
+print(x)
+
+x = ("apple", "banana", "cherry")
+y = ("orange", "mango")
+x += y
+print(x)
+
+x = ("apple", "banana", "cherry")
+y = list(x)
+y.remove("apple")
+x = tuple(y)
+print(x)
+
+thistuple  = ('apple', 'banana', 'cherry', 'orange', 'mango')
+del thistuple 
+# print(thistuple)
+
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+(green, *red, yellow) = fruits
+print(green)
+print(yellow)
+print(red)
+
+thistuple = ("cherry", "strawberry", "raspberry", "cherry")
+for x in thistuple:
+    print(x)
+
+thistuple = ("cherry", "strawberry", "raspberry", "cherry")
+for i in range(len(thistuple)):
+    print(thistuple[i])
+
+x = ("apple", "banana", "cherry")
+y = ("cherry", "strawberry", "raspberry", "cherry")
+z = x+y
+print(z)
+
+fruits = ('cherry', 'strawberry', 'raspberry', 'cherry', 'cherry', 'strawberry', 'raspberry', 'cherry')
+x = fruits.index("strawberry")
+print(x)
