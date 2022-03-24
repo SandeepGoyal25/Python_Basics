@@ -337,3 +337,91 @@ print(z)
 fruits = ('cherry', 'strawberry', 'raspberry', 'cherry', 'cherry', 'strawberry', 'raspberry', 'cherry')
 x = fruits.index("strawberry")
 print(x)
+
+myset = {"apple", "cherry", "banana", "cherry"}
+print(type(myset))
+
+thisset = set(("apple", "banana", "cherry")) # note the double round-brackets
+print(thisset)
+
+a = {'cherry', 'strawberry', 'raspberry', "banana", 'cherry', 'cherry', 'strawberry', 'raspberry', 'cherry'}
+for x in a:
+    print(x)
+print("banana" in a)
+a.add("orange")
+print(a)
+
+b = tropical = {"pineapple", "mango", "papaya"}
+a.update(b)
+print(a)
+
+a = {"pineapple", "mango", "papaya"}
+b = ["apple", "banana", "cherry"]
+print(type(a))
+print(type(b))
+a.update(b)
+print(a)
+
+import this
+
+thisSet = {"pineapple", "mango", "papaya"}
+thisSet.remove("pineapple")
+print(thisSet)
+thisSet = {"pineapple", "mango", "papaya"}
+thisSet.discard("Banana")                    # Will not give an error
+print(thisSet)
+
+thisSet = {"pineapple", "mango", "papaya"}
+x = thisSet.pop()
+print(x)
+print(thisSet)
+
+thisSet = {"pineapple", "mango", "papaya"}
+thisSet.clear()
+print(thisSet)
+
+from re import A
+
+a = {"apple", "banana", "cherry"}
+del a
+# print(a)
+
+thisset = {"apple", "banana", "cherry"}
+for x in thisset:
+    print(x)
+
+set1 = {"a", "b" , "c"}
+set2 = {1, 2, 3}
+set3 = set2.union(set1)
+set3 = set1.union(set2)
+print(set3)
+
+set1 = {"a", "b" , "c"}
+set2 = {1, 2, 3, 5}
+set1.update(set2)
+print(set1)
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+x.intersection_update(y)
+print(x)
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.intersection(y)
+print(z)
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+x.symmetric_difference_update(y)
+print(x)
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.symmetric_difference(y)
+print(z)
+
+x = {"a", "b", "c"}
+y = {"f", "e", "d", "c", "b", "a"}
+z = x.issubset(y)
+print(z)
