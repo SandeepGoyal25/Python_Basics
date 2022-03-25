@@ -1,7 +1,6 @@
-# x = 3
-x = str("3")
+#  x = 3
+x = 3
 print(type(x))
-
 x = str(3)    # x will be '3'
 y = int(3)    # y will be 3
 z = float(3)  # z will be 3.0
@@ -562,39 +561,33 @@ a = 100
 b = 200
 if b>a:
     pass
-
 i = 1
 while i < 5:
   print(i)
   i += 1
-
 i = 1
 while i < 7:
   print(i)
   if i == 4:
     break
   i += 1
-
 i = 0
 while i < 6:
   i += 1
   if i == 3:
     continue
   print(i)
-
 i = 1
 while i < 6:
   print(i)
   i += 1
 else:
   print("i is no longer less than 6")
-
 fruits = ["apple", "banana", "cherry"]
 for x in fruits:
   print(x)
 for x in "banana":
   print(x)
-
 fruits = ["apple", "banana", "cherry"]
 for x in fruits:
   print(x) 
@@ -605,28 +598,200 @@ for x in fruits:
   if x == "banana":
     break
   print(x)
-
 fruits = ["apple", "banana", "cherry"]
 for x in fruits:
   if x == "banana":
     continue
   print(x) 
-
 for x in range(5, 100, 10):
   print(x)
-
 for x in range (7):
   if x == 3: break
   print(x)
 else:
   print("Thus finished!")
-
 adj = ["red", "big", "tasty"]
 fruits = ["apple", "banana", "cherry"]
-
 for x in adj:
   for y in fruits:
     print(x, y)
-
 for x in [0, 1, 2]:
   pass
+def my_function():
+    print("Hello from a function")
+my_function()
+def my_function(fname):
+    print(fname + " Gupta")
+my_function("Vihaan")
+my_function("Suhaani")
+my_function("Shreyansh")
+def my_function(Fname, Lname):
+    print(Fname + " " + Lname)
+my_function("Shreyansh", "Goyal")
+def my_func(*kids):
+    print("The youngest child is " + kids[2])
+my_func("Innaya", "Shaurya", "Shreyansh")
+def my_func(child3, child2, child1):
+    print("The youngest child is " + child3)
+my_func(child1 = "Innaya", child2 = "Shaurya", child3= "Shreyansh")
+def my_func(**kid):
+    print("His first name is " + kid["fname"])
+my_func(fname = "Shreyansh", lname = "Goyal", mname = "Sandeep")
+def my_func(country = "India"):
+    print("I am from " + country)
+my_func("China")
+my_func("USA")
+my_func("Japan")
+my_func()
+# om cgitb import reset
+# om operator import ne
+# om statistics import multimode
+# om traceback import FrameSummary
+# om unittest import result
+def my_func(food):
+    for x in food:
+        print(x)
+Fruits = ['apple', 'banana', "mango"]
+my_func(Fruits)
+def my_function(x):
+    return 5 * x
+print(my_function(3))
+print(my_function(5))
+print(my_function(9))
+def function():
+    pass
+def tri_recursion(k):
+    if(k > 0):
+        result = k + tri_recursion(k - 1)
+        print(result)
+    else:
+        result = 0
+    return result
+print("\n\Recursion Example Results")
+tri_recursion(6)
+x = lambda a : a + 10
+print(x(10))
+x = lambda a, b: a*b
+print(x(8, 9))
+x = lambda a, b, c : a+b+c
+print(x(4, 5, 6))
+def my_func(n):
+    return lambda a: a*n
+mydoubler = my_func(2)
+print(mydoubler(19))
+def my_func(n):
+    return lambda a: a*n
+mytripler = my_func(3)
+print(mytripler(19))
+cars = ["Ford", "Volvo", "BMW"]
+print(type(cars))
+x = cars[1]
+print(x)
+cars[1] = "Toyota"
+print(cars)
+x = len(cars)
+print(x)
+for x in cars:
+    print(x)
+cars.append("Honda")
+print(cars)
+cars.pop(2)
+x = cars.index("Honda")
+print(x)
+class MyClass:
+    x = 5
+    print(x)
+class MyClass:
+     x = 5
+p1 = MyClass()
+print(p1.x)
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+p1 = Person("Sandy", 33)
+print(p1.name)
+print(p1.age)
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def myfunc(self):
+        print("Hello my name is " + self.name)
+p1 = Person("Sandy", 33)
+p1.myfunc()
+class Person:
+    def __init__(mysillyobject, name, age):
+        mysillyobject.name = name
+        mysillyobject.age = age
+    def myfunc(abc):
+        print("Hello my name is " + abc.name)
+p1 = Person("Sandy", 33)
+p1.age = 30
+p1.myfunc()
+print(p1.age)
+del p1.age
+# print(p1.age)
+class Person:
+    def __init__(self, fname, lname):
+        self.firstname = fname
+        self.lastname = lname
+    def printname(self):
+        print(self.firstname, self.lastname)
+# x = Person("Sandy", "Goyal")
+# x.printname()
+class Student(Person):
+    def __init__(self, fname, lname, year):
+        super().__init__(fname, lname)
+        self.graduationyear = 2021
+        # Person.__init__(self, fname, lname)
+    def welcome(self):
+        print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)
+x = Student("Shrey", "Goyal", 2021)
+x.welcome()
+mytuple = ("apple", "banana", "cherry")
+myit = iter(mytuple)
+print(next(myit))
+print(next(myit))
+print(next(myit))
+mystr = "banana"
+myit = iter(mystr)
+print(next(myit))
+print(next(myit))
+print(next(myit))
+print(next(myit))
+print(next(myit))
+mytuple = ("apple", "banana", "cherry")
+for x in mytuple:
+    print(x)
+class MyNumbers:
+    def __iter__(self):
+        self.a = 1
+        return self
+    def __next__(self):
+        x = self.a
+        self.a += 1
+        return x
+myclass = MyNumbers()
+myiter = iter(myclass)
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+class MyNumbers:
+    def __iter__(self):
+        self.a = 1
+        return self
+    def __next__(self):
+        if self.a <= 20:
+            x = self.a
+            self.a += 1
+            return x
+        else:
+            raise StopIteration
+myclass = MyNumbers()
+myiter = iter(myclass)
+for x in myiter:
+    print(x)
